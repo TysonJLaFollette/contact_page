@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <title>Success</title>
+    </head>
+    <body>
+        <div id="maindiv">
+        <div id="header">
+            <a href="./index.html"><img id="logo" alt="Shaedycult logo" src="./image/logo.svg"></a>
+        </div>
+        <div class="about">
+            <h2 class="ustitle">Success!</h2>
+            <p class="aboutbody">Your info has been emailed to a Shaedycult representative. You should receive a disclaimer within 24 hours. Enjoy the afterlife!</p>
+        </div>
+        <div id="clearfix"></div>
+        </div>
+        <div id="footer">
+            <div id="toprow">
+                <a class="footernav" href="./index.html">Home</a>
+                <a class="footernav" href="./about.html">About Us</a>
+                <a class="footernav" href="./contact.html">Contact</a>
+                <img class="social" alt="instagram logo" src="./image/instagram.svg">
+                <img class="social" alt="facebook logo" src="./image/facebook.svg">
+                <img class="social" alt="twitter logo" src="./image/twitter.svg">
+            </div>
+            <div id="bottomrow">
+                	&copy; Shaedycult
+            </div>
+            
+        </div>
+    </body>
+    <script type="text/javascript">
+        function validateForm() {
+    var emailexpression = new RegExp("/\S+@\S+\.\S+/");
+    if (document.forms["form"]["firstname"].value == (null || "") ||
+    document.forms["form"]["lastname"].value == (null || "") ||
+    document.forms["form"]["email"].value == (null || "") ||
+    document.forms["form"]["verifyemail"].value == (null || "")){
+        alert("All fields are required.");
+        return false;
+    }else if(emailexpression.test(document.forms["form"]["email"].value == false)){
+        alert("Email address: " + document.forms["form"]["email"].value + " is invalid.");
+        return false;
+    } else if(document.forms["form"]["email"].value != document.forms["form"]["verifyemail"].value){
+        alert("Email addresses do not match.");
+        return false;
+    }else{
+        alert("Success! We'll send you your Kool-Aid immediately! Have a happy afterlife!");
+        return true;
+    }
+}
+    </script>
+</html>

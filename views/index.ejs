@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+        <title>Shaedycult Contact</title>
+    </head>
+    <body>
+        <div id="maindiv">
+        <div id="header">
+            <a href="./index.html"><img id="logo" alt="Shaedycult logo" src="./image/logo.svg"></a>
+            <a class="nav" href="./about.html">About Us</a>
+            <a class="nav" href="./contact.html">Contact</a>
+        </div>
+        <div class="about">
+            <h2 class="ustitle">HOLD OUT A LITTLE LONGER</h2>
+            <p class="aboutbody">Fill out the form below and we will send you an email with a simple liability form for you to sign. After that, we ship you your free can of Kool-Aid, satisfaction guaranteed. We've never heard a bad word from our wonderful customers, because they already moved on to the afterlife!</p>
+        </div>
+        <div class="form">
+            <form class="form" name="form" action="" onsubmit="return validateForm()" method="post">
+                <input id="firstname" name="firstname" type="text" class="halfwidth" placeholder="First Name">
+                <input id="lastname" name="lastname" type="text" class="halfwidth" placeholder="Last Name">
+                <br>
+                <input id="email" name="email" type="text" class="fullwidth" placeholder="Email Address">
+                <br>
+                <input id="confirmemail" name="verifyemail" type="text" class="fullwidth" placeholder="Confirm Email Address">
+                <br>
+                <input id="button" class="button animated" type="submit" value="BRING ON THE AFTERLIFE!">
+            </form>
+        </div>
+        <div id="clearfix"></div>
+        </div>
+        <div id="footer">
+            <div id="toprow">
+                <a class="footernav" href="./index.html">Home</a>
+                <a class="footernav" href="./about.html">About Us</a>
+                <a class="footernav" href="./contact.html">Contact</a>
+                <img class="social" alt="instagram logo" src="./image/instagram.svg">
+                <img class="social" alt="facebook logo" src="./image/facebook.svg">
+                <img class="social" alt="twitter logo" src="./image/twitter.svg">
+            </div>
+            <div id="bottomrow">
+                	&copy; Shaedycult
+            </div>
+            
+        </div>
+    </body>
+    <script type="text/javascript">
+        function validateForm() {
+    var emailexpression = new RegExp("/\S+@\S+\.\S+/");
+    if (document.forms["form"]["firstname"].value == (null || "") ||
+    document.forms["form"]["lastname"].value == (null || "") ||
+    document.forms["form"]["email"].value == (null || "") ||
+    document.forms["form"]["verifyemail"].value == (null || "")){
+        alert("All fields are required.");
+        return false;
+    }else if(emailexpression.test(document.forms["form"]["email"].value == false)){
+        alert("Email address: " + document.forms["form"]["email"].value + " is invalid.");
+        return false;
+    } else if(document.forms["form"]["email"].value != document.forms["form"]["verifyemail"].value){
+        alert("Email addresses do not match.");
+        return false;
+    }else{
+        alert("Success! We'll send you your Kool-Aid immediately! Have a happy afterlife!");
+        return true;
+    }
+}
+    </script>
+</html>
